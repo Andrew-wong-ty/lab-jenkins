@@ -24,5 +24,12 @@ pipeline {
                 echo 'Depending on the context, we may publish the project artifact or upload pickle files'
             }
         }
+        stage('Scan') {
+            steps {
+                withSonarQubeEnv(installationName: 'sq1') { 
+                    sh 'echo success'
+                }
+            }
+        }
     }
 }
