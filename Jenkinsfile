@@ -26,11 +26,12 @@ pipeline {
         }
         stage('Scan') {
             steps {
-                def scannerHome = tool 'sonar'
                 withSonarQubeEnv(installationName: 'sq1') { 
-                    sh "${scannerHome}/bin/sonar-scanner --version"
+                    sh "ls ${scannerHome}" 
+                    sh "echo ${scannerHome}"
                 }
             }
+            
         }
     }
 }
