@@ -28,11 +28,18 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'sonar'
-                    withSonarQubeEnv(installationName: 'sq1') { 
-                        sh "${scannerHome}/bin/sonar-scanner --version"
+                    withSonarQubeEnv(installationName: 'sq1') {
+                        sh """
+                        ${scannerHome}/bin/sonar-scanner \
+                          -Dsonar.projectKey=firstProject \
+                          -Dsonar.sources=. \
+                          -Dsonar.host.url=http://34.174.125.101:9000 \
+                          -Dsonar.login=sqp_46bf7e4a1733afbf6d40a2b06a7fdcf7315bd766
+                        """
                     }
                 }
             }
         }
+
     }
 }
