@@ -34,7 +34,7 @@ pipeline {
                             -Dsonar.projectKey=firstProject \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://34.174.174.113:9000 \
-                            -Dsonar.token=sqp_f67a3b2e6352df99cf050174a36c1ab6bdb9b471
+                            -Dsonar.token=sqp_b85f24b477b6fe4a846977882d481644b6a2dba5
                         """
                     }
                 }
