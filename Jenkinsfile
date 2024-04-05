@@ -31,10 +31,10 @@ pipeline {
                     withSonarQubeEnv(installationName: 'sq1') {
                         sh """
                         ${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=firstProject \
-                          -Dsonar.sources=. \
-                          -Dsonar.host.url=http://34.174.125.101:9000 \
-                          -Dsonar.login=sqp_46bf7e4a1733afbf6d40a2b06a7fdcf7315bd766
+                            -Dsonar.projectKey=firstProject \
+                            -Dsonar.sources=. \
+                            -Dsonar.host.url=http://34.174.174.113:9000 \
+                            -Dsonar.token=sqp_f67a3b2e6352df99cf050174a36c1ab6bdb9b471
                         """
                     }
                 }
